@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= yield(:title) %> | Ch3 Sample App</title>
-    <%= csrf_meta_tags %>
+    <%= csrf_meta_tags %> <!-- csrf_meta_tag [prevents] cross-site request forgery (CSRF), a type of malicious web attack -->
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,8 +12,9 @@
     <div class="container">
       <ul class="nav nav-tabs">
         <li role="presentation" class="active"><%= link_to 'Home', static_pages_home_path %></li> 
-        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><%= link_to 'About', static_pages_about_path %></li>
         <li role="presentation"><%= link_to 'Help', static_pages_help_path %></li>
+        <!-- li role="presentation"><a href="#">Profile</a></li -->
       </ul>
     </div>
     <div class="container">
