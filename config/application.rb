@@ -7,7 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 # suggested fix for failing to precompile on Heroku
-config.assets.initialize_on_precompile = false
+# config.assets.initialize_on_precompile = false
 
 module SampleApp
   class Application < Rails::Application
